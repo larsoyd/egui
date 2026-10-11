@@ -369,6 +369,6 @@ self_named_module_files = "allow" # Disabled waiting on https://github.com/rust-
 significant_drop_tightening = "allow" # Too many false positives
 wildcard_imports = "allow" # `use crate::*` is useful to avoid merge conflicts when adding/removing imports
 
-# Wayland drops and clipboard on one data device, until rust-windowing/winit#4729 is released
+# wayland drops, drag cursor moves and the clipboard on one data device until rust-windowing/winit#4729 ships
 [patch.crates-io]
-winit = { git = "https://github.com/crmne/winit", rev = "17aa519fb3ea4957c6681fb5dc4efedc638125f5" }
+winit = { git = "https://github.com/larsoyd/winit", rev = "3ca57ec98651c3020b1c4650efdc942d5e701e0a" }

@@ -368,3 +368,7 @@ map_unwrap_or = "allow" # so is this one
 self_named_module_files = "allow" # Disabled waiting on https://github.com/rust-lang/rust-clippy/issues/9602
 significant_drop_tightening = "allow" # Too many false positives
 wildcard_imports = "allow" # `use crate::*` is useful to avoid merge conflicts when adding/removing imports
+
+# Wayland drops and clipboard on one data device, until rust-windowing/winit#4729 is released
+[patch.crates-io]
+winit = { git = "https://github.com/crmne/winit", rev = "17aa519fb3ea4957c6681fb5dc4efedc638125f5" }
